@@ -1,7 +1,7 @@
 programa
 {
 	inclua biblioteca Util-->ut
-	inclua biblioteca Matematica-->mat
+	inclua biblioteca Matematica-->mat
 	
 	
 	funcao inicio()
@@ -20,18 +20,20 @@ programa
 	}
 
 
-	funcao consumo(real l_inicial, real l_final, real valor_kwh)
+	funcao real consumo(real l_inicial, real l_final, real valor_kwh)
 	{	
 
 		real diferenca
 		real total
+		real consumo_total
 		
 			diferenca = l_final - l_inicial
-			total = diferenca * valor_kwh
+			consumo_total = diferenca * valor_kwh
 
-			escreva("\nVALOR A PAGAR: R$ " + mat.arredondar(total, 2))
+			escreva("\nVALOR A PAGAR: R$ " + mat.arredondar(consumo_total, 2))
 			ut.aguarde(6000)
 			limpa()
+			retorne consumo_total
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -39,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 591; 
+ * @POSICAO-CURSOR = 658; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
