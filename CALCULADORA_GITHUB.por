@@ -10,7 +10,7 @@ programa
 			escreva("INFORME O PRIMEIRO NÚMERO: ")
 			leia(n1)
 	
-			escreva("\nINFORME A OPERAÇÃO: (+) PARA ADIÇÃO | (-) PARA SUBTRAÇÃO | (*) PARA MULTIPLICAÇÃO | (/) PARA DIVISÃO: ")
+			escreva("\nINFORME A OPERAÇÃO: (+) PARA ADIÇÃO | (-) PARA SUBTRAÇÃO | (*) PARA MULTIPLICAÇÃO | (/) PARA DIVIÇÃO | % PARA PORCENTAGEM: ")
 			leia(op)
 			
 			escreva("\nINFORME O SEGUNDO NÚMERO: ")
@@ -41,12 +41,19 @@ programa
 							total = n1 * n2
 							escreva("\nTOTAL: " + Matematica.arredondar(total, 2))
 							pare
+							
 				
 							caso '/':
 							total = n1 / n2
 							escreva("\nTOTAL: " + Matematica.arredondar(total, 2))
 							pare
-				
+
+
+							caso '%':
+							total = (n1 * n2) / 100
+							escreva("\nTOTAL: " + Matematica.arredondar(total, 2))
+							pare
+											
 				
 							caso contrario:
 							escreva("ERRO!")
@@ -58,7 +65,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1027; 
+ * @POSICAO-CURSOR = 358; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
